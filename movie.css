@@ -1,0 +1,747 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+.container{
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    grid-auto-rows: minmax(80px, auto);
+    grid-template-areas:
+    "one one one one"
+    "two two two two"
+    "two two two two"
+    "two two two two"
+    "two two two two"
+    "two two two two"
+    "two two two two"
+    "two two two two"
+    "two two two two"
+    "three three three three"
+    "four four four four"
+    "five five six six"
+    "five five six six"
+    "five five six six"
+    "five five six six"
+    "five five six six"
+    "seven seven seven seven"
+    "eight eight eight eight"
+    ". . . nine";
+}
+
+.container > *{
+    padding: 30px;
+}
+
+.one{
+    background: linear-gradient(to bottom, black, rgb(46, 43, 43));
+    grid-area: one;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: white;
+    position: fixed;
+    width: 100%;
+    z-index: 1;
+    border-bottom: 3px solid rgb(102, 6, 6);
+    padding: 10px;
+}
+
+.head1 span{
+    font-family: 'Ramaraja', serif;
+    font-size: 50px;
+    color: rgb(180, 7, 7);
+    padding: 0;
+}
+
+.one h3{
+    font-family: 'Pacifico', cursive;
+    text-transform: capitalize;
+}
+
+.one img{
+    height: 50px;
+    width: 50px;
+    border: 2px solid red;
+    color: white;
+}
+
+.head2 h1{
+    font-family: 'Lobster', cursive;
+    font-size: 30px;
+    display: inline-block;
+    margin: 0 30px;
+    padding: 3px 30px;
+}
+
+.head2 h1:hover{
+    background-color: rgb(50, 85, 73);
+    font-size: 30px;
+    border-radius: 5px;
+    top: 0px;
+}
+
+.two{
+    grid-area: two;
+    background: url(/images/images\ \(20\).jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover;
+    display: flex;
+    justify-content: flex-end;
+    flex-direction: column;
+    width: 100vw;
+    height: 100%;
+}
+
+.two p{
+    font-family: 'Source Serif 4', sans-serif;
+    color: white;
+    font-size: 20px;
+    line-height: 50px;
+    text-shadow: 1px 1px red;
+}
+
+.two p::first-letter{
+    font-size: 100px;
+}
+
+.two button{
+    font-family: 'Source Serif 4', sans-serif;
+    font-size: 20px;
+    padding: 10px 35px;
+    color: rgb(148, 80, 25);
+    font-weight: 500px;
+    text-transform: uppercase;
+    border-radius: 2px 20px;
+}
+
+.two button:hover{
+    background-color: gray;
+    color: white;
+}
+
+.two img{
+    animation: blood 10s linear infinite;
+    animation-fill-mode: both;
+}
+
+.two img:nth-child(1){
+    animation-delay: 5s;
+}
+
+.two img:nth-child(2){
+    animation-delay: 10s;
+}
+
+.two img:nth-child(3){
+    animation-delay: 4s;
+}
+
+.two img:nth-child(4){
+    animation-delay: 2s;
+}
+
+.two img:nth-child(5){
+    animation-delay: 8s;
+}
+
+.two img:nth-child(6){
+    animation-delay: 2s;
+}
+
+.two img:nth-child(7){
+    animation-delay: 6s;
+}
+
+.two img:nth-child(8){
+    animation-delay: 1s;
+}
+
+.two img:nth-child(9){
+    animation-delay: 5s;
+}
+
+@keyframes blood{
+    0%{transform: translateY(-100px);
+       opacity: 0;
+    }
+
+    30%{
+        opacity: 0.5;
+    }
+
+    50%{
+        opacity: 1;
+    }
+
+    70%{
+        opacity: 0.5;
+    }
+
+    100%{transform: translateY(500px);
+         opacity: 0;
+    }
+}
+
+.three{
+    background: linear-gradient(to top, rgb(53, 15, 5), rgb(26, 22, 22));
+    grid-area: three;
+    align-items: center;
+    display: flex;
+    justify-content: space-between;
+}
+
+.three img{
+    animation: move 60s ease-in infinite;
+    animation-fill-mode: both;
+}
+
+@keyframes move{
+    from{transform: translateX(-1210px);}
+    to{transform: translateX(1200px);}
+}
+
+.three img{
+    box-shadow: 5px 5px rgb(65, 62, 62);
+}
+
+.four{
+    background-color: rgb(92, 86, 86);
+    grid-area: four;
+    padding: 0;
+}
+
+.four .cast{
+    display: flex;
+    justify-content: space-around;
+}
+
+.four h1{
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    margin: 20px;
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.four img{
+    border-radius: 200px;
+}
+
+.four b{
+    font-family: 'Acme', sans-serif;
+    text-align: center;
+    font-size: 25px;
+}
+
+.five{
+    background-color: aqua;
+    grid-area: five;
+}
+
+.five h1{
+    font-family: 'Taviraj', serif;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.five form{
+    display: flex;
+    justify-content: space-around;
+}
+
+.five input{
+    font-family: 'Taviraj', serif;
+    height: 30px;
+    width: 100px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.five input:hover{
+    background-color: rgb(14, 8, 8);
+    color: white;
+}
+
+.six{
+    background: url(/images/images\ \(16\).jpeg);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: contain;
+    background-clip: content-box;
+    grid-area: six;
+}
+
+.six h1{
+    font-family: 'Taviraj', serif;
+    text-align: center;
+    text-transform: capitalize;
+    padding: 10px;
+    margin: 10px;
+    text-decoration: underline;
+}
+
+.six form{
+    display: flex;
+    justify-content: space-around;
+}
+
+.six input{
+    font-family: 'Taviraj', serif;
+    height: 30px;
+    width: 100px;
+    text-transform: capitalize;
+    font-weight: bold;
+    font-size: 100%;
+    border-radius: 5px;
+    margin-top: 5px;
+}
+
+.six input:hover{
+    background-color: rgb(14, 8, 8);
+    color: white;
+} 
+
+.seven{
+    background-color: aqua;
+    grid-area: seven;
+}
+
+.seven h1{
+    font-family: 'Rubik Mono One', sans-serif;
+    text-align: center;
+    line-height: 50px;
+}
+
+.seven .img{
+    text-align: center;
+}
+
+.seven p{
+    font-size: 20px;
+    font-family: 'Alice', serif;
+}
+
+.eight{
+    font-family: 'Alice', serif;
+    font-size: 18px;
+    background-color: gray;
+    grid-area: eight;
+    text-align: center;
+}
+
+.nine{
+    background-color: transparent;
+    grid-area: nine;
+    position: fixed;
+    top: 520px;
+    right: 20px;
+    padding: 0;
+}
+
+.nine img{
+    width: 70px;
+    height: 70px;
+}
+
+.try{
+    visibility: hidden ;
+}
+
+@media screen and (max-width: 957px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+        grid-auto-rows: minmax(80px, auto);
+        grid-template-areas:
+        "one one"
+        "two two"
+        "two two"
+        "two two"
+        "three three"
+        "four four"
+        "five six"
+        "seven seven"
+        "eight eight"
+        ". nine";
+    }
+
+    .one{
+        padding: 20px;
+    }
+
+    .head2 h1{
+        font-size: 20px;
+        margin: 0 20px;
+        padding: 3px 15px;
+        border: 2px solid red;
+    }
+
+    .head2 h1:hover{
+        background-color: rgb(50, 85, 73);
+        font-size: 22px;
+        border-radius: 5px;
+        top: 0px;
+    }
+
+    .head2{
+        display: flex;
+    }
+
+    .head1 span{
+        font-size: 40px;
+    }
+
+    .one h3{
+        font-size: 20px;
+        margin: 0 20px;
+    }
+
+    .two{
+        grid-area: two;
+        background: url(/images/images\ \(20\).jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100vw;
+        max-height: 90vh;
+    }
+    
+    .two p{
+        font-size: 18px;
+        line-height: 30px;
+    }
+
+    .two button{
+        font-size: 15px;
+        padding: 10px 20px;
+        margin: 20px 5px;
+    }
+
+    .two p::first-letter{
+        font-size: 85px;
+    }
+
+    .three img{
+        height: 32vh;
+        width: 32vw;
+        margin: 0 20px;
+    }
+
+    .four b{
+        text-align: center;
+        font-size: 20px;
+        margin: 0 10px;
+    }
+
+    .four img{
+        border-radius: 800px;
+        height: 210px;
+        width: 220px;
+        margin: 10px;
+    }
+
+    .four b{
+        font-size: 18px;
+    }
+}
+
+@media screen and (max-width: 788px){
+    .head1 span{
+        font-size: 37px;
+    }
+
+    .one h3{
+        font-size: 15px;
+        margin: 0 20px;
+    }
+
+    .head2 h1{
+        font-size: 18px;
+        margin: 0 10px;
+    }
+
+    .head2 h1:hover{
+        font-size: 10px;
+        padding: 0 8px;
+    }
+
+    .two p{
+        font-size: 16px;
+        line-height: 25px;
+    }
+
+    .two p::first-letter{
+        font-size: 70px;
+    }
+
+    .two button{
+        font-size: 12px;
+        padding: 10px 20px;
+    }
+
+    .two{
+        grid-area: two;
+        background: url(/images/images\ \(20\).jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100vw;
+        max-height: 80vh;
+    }
+
+    .three img{
+        height: 32vh;
+        width: 32vw;
+        margin: 0 30px;
+    }
+
+    .four img{
+        border-radius: 500px;
+        height: 180px;
+        width: 180px;
+    }
+
+    .four b{
+        font-size: 18px;
+    }
+
+    .four h1{
+        font-size: 27px;
+    }
+
+    .nine img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 756px){
+    .four b{
+        font-size: 15px;
+    }
+
+    .four img{
+        border-radius: 500px;
+        height: 180px;
+        width: 180px;
+        margin: 0;
+    }
+
+    .four h1{
+        font-size: 25px;
+    }
+
+    .five h1{
+        padding: 10px;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .five video{
+        height: 100%;
+        width: 100%;
+    }
+
+    .five input{
+        height: 25px;
+        width: 70px;
+        font-size: 80%;
+    }
+
+    .six h1{
+        padding: 10px;
+        margin: 10px;
+        font-size: 18px;
+    }
+
+    .six video{
+        height: 100%;
+        width: 100%;
+    }
+
+    .six input{
+        height: 25px;
+        width: 70px;
+        font-size: 80%;
+    }
+
+    .seven p{
+        font-size: 15px;
+        font-family: 'Alice', serif;
+    }
+
+    .seven h1{
+        font-size: 25px;
+    }
+    
+    .eight{
+        font-family: 'Alice', serif;
+        font-size: 15px;
+        background-color: gray;
+        grid-area: eight;
+        text-align: center;
+    }  
+    
+    .nine img{
+        width: 50px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 1150px){
+    .two{
+        grid-area: two;
+        background: url(/images/images\ \(20\).jpeg);
+        background-position: center center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        max-width: 100vw;
+        max-height: 100vh;
+    }
+
+    .head2 h1:hover{
+        background-color: rgb(50, 85, 73);
+        font-size: 26px;
+        border-radius: 5px;
+        top: 0px;
+    }
+
+    .two p::first-letter{
+        font-size: 70px;
+    }
+
+    .two p{
+        font-size: 20px;
+    }
+
+    .nine img{
+        width: 60px;
+        height: 60px;
+    }
+}
+
+@media screen and (max-width: 671px){
+    .container{
+        display: grid;
+        grid-template-columns: repeat(1, 1fr);
+        grid-auto-rows: minmax(1px, auto);
+        grid-template-areas:
+        "one"
+        "two"
+        "three"
+        "four"
+        "five"
+        "five"
+        "six"
+        "six"
+        "seven"
+        "eight"
+        "nine";
+    }
+
+    .head1 span{
+        font-size: 30px;
+        color: rgb(180, 7, 7);
+    }
+    
+
+    .two{
+        grid-area: two;
+        background: url(/images/images\ \(21\).jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 100vh;
+        border: 2px solid red;
+    }
+
+    .two p::first-letter{
+        font-size: 50px;
+    }
+
+    .three{
+        max-width: 100vw;
+    }
+
+    .four{
+        max-width: 100vw;
+        display: flex;
+        flex-direction: column;
+    }
+
+    .four img{
+        height: 350px;
+        width: 350px;
+        margin: 30px 0;
+    }
+
+    .four .cast{
+        display: block;
+        margin: 50px auto;
+    }
+
+    .four h1{
+        margin: 10px auto;
+    }
+
+    .four p{
+        position: relative;
+    }
+
+    .four b{
+        max-width: 100vw;
+        border: 2px solid red;
+        position: absolute;
+        left: 50px;
+        font-size: 16px;
+    }
+
+    .seven img{
+        width: 60px;
+        height: 50px;
+    }
+}
+
+@media screen and (max-width: 370px){
+    .two{
+        grid-area: two;
+        background: url(/images/images\ \(21\).jpeg);
+        background-position: center;
+        background-repeat: no-repeat;
+        background-size: cover;
+        width: 100vw;
+        height: 80vh;
+        border: 2px solid red;
+    }
+
+    .two p::first-letter{
+        font-size: 30px;
+    }
+
+    .two p{
+        font-size: 12px;
+    }
+    .three{
+        max-width: 100vw;
+    }
+
+    .four img{
+        height: 300px;
+        width: 300px;
+        margin: 30px 0;
+    }
+}
+
+.show{
+    display: block;
+}
