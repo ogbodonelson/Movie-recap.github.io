@@ -1,0 +1,140 @@
+.container{
+    margin: 0;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    grid-auto-rows: minmax(100px, auto);
+    grid-template-areas: 
+    "one one"
+    "one one"
+    "two two"
+    "two two"
+    "two two"
+    "two two"
+    "two two"
+    "two two";
+}
+
+.one{
+    background-color: aqua;
+    padding: 30px;
+    grid-area: one;
+}
+
+.one h1{
+    font-family: 'Rubik Wet Paint', cursive;
+}
+
+.one > *{
+    font-family: 'Lobster', cursive;
+}
+
+.two{
+    background-color: rgb(243, 229, 39);
+    padding: 30px;
+    grid-area: two;
+}
+
+.two > *{
+    margin: 50px;
+}
+
+.two p{
+    font-size: 25px;
+}
+
+.two form{
+    font-size: 18px;
+}
+
+.one > *{
+    text-align: center;
+}
+
+form div{
+    font-family: 'Playfair Display SC', serif;
+}
+
+form div p{
+    font-family: 'Bebas Neue', cursive;
+}
+
+h1{
+    font-size: 50px;
+    word-spacing: 20px;
+}
+
+p{
+    font-size: 20px;
+}
+
+span{
+    font-size: 50px;
+}
+
+input[type = submit]{
+    padding: 5px 30px;
+    font-size: 25px;
+    font-family: 'BIZ UDPMincho', serif;
+}
+
+input[type = submit]:hover{
+    padding: 5px 30px;
+    font-size: 25px;
+    font-family: 'BIZ UDPMincho', serif;
+    background-color: rgb(31, 27, 27);
+    color: white;
+}
+
+@media screen and (max-width: 380px){
+    .two p{
+        font-size: 23px;
+    }
+
+    .two > *{
+        margin: 0px;
+    }
+}
+
+@media screen and (max-width: 375px){
+    .container{
+        grid-template-areas: 
+        "one one"
+        "one one"
+        "one one"
+        "two two"
+        "two two"
+        "two two"
+        "two two"
+        "two two"
+        "two two";
+    }
+
+    h1{
+        font-size: 30px;
+        word-spacing: 10px;
+    }
+
+    .two > *{
+        margin: 5px;
+    }
+}
+
+@media screen and (max-width: 440px){
+    .two p{
+        font-size: 23px;
+    }
+
+    .two > *{
+        margin: 2px;
+    }
+}
+
+@media screen and (max-width: 515px){
+    .two p{
+        font-size: 23px;
+    }
+
+    .two > *{
+        margin: 0;
+    }
+}
